@@ -3,6 +3,7 @@ export type AgentAction = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   toolInput: string | Record<string, any>;
   log: string;
+  returnValues: Record<string, any>;
 };
 
 export type AgentFinish = {
@@ -14,4 +15,5 @@ export type AgentFinish = {
 export type AgentStep = {
   action: AgentAction;
   observation: string;
+  returnValues: Record<string, any>;
 };
